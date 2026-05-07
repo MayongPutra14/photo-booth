@@ -13,7 +13,7 @@ const Logo = () => {
         alt="Logo HARAZA photo booth"
         className="relative z-50 rounded-xl shadow-md"
       />
-      <Pencil />
+      <Pencil className="-top-10 -left-12 w-40" />
       <HomeSparks className="-bottom-20 -left-8 z-10 w-16" />
       <IconCurlyArrow />
     </div>

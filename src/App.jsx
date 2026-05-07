@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import TemplateLayoutPage from "./pages/TemplateLayoutPage";
+import TemplateFrame from "./pages/TemplateFramePage";
 
 function App() {
   return (
@@ -23,8 +24,12 @@ function App() {
             element={<HomePage />}
           />
           <Route
-            path="/gallery"
+            path="/template"
             element={<TemplateLayoutPage />}
+          />
+          <Route
+            path="/frame"
+            element={<TemplateFrame />}
           />
         </Route>
       </Routes>

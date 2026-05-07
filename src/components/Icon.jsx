@@ -2,11 +2,14 @@ import {
   IconPencil,
   IconSparksV1,
   CurlyArrow,
+  IconSparksV2,
 } from "../assets/decorations/Decorations";
 
-export const Pencil = () => {
+export const Pencil = ({ className }) => {
   return (
-    <IconPencil className="absolute -top-36 -left-10 w-40" />
+    <IconPencil
+      className={`absolute ${className}`}
+    />
   );
 };
 
@@ -19,7 +22,11 @@ export const HomeSparks = ({ className }) => {
 };
 
 export const IconCurlyArrow = () => {
-  return(
-    <CurlyArrow className="absolute z-10 -bottom-38 -right-10 w-20"/>
-  )
-}
+  return (
+    <CurlyArrow className="absolute -right-10 -bottom-38 z-10 w-20" />
+  );
+};
+
+export const LayoutSpark = () => {
+  return <IconSparksV2 className="w-12" />;
+};
