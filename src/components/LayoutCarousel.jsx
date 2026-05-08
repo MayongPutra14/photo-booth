@@ -13,19 +13,19 @@ const templates = [
     id: 1,
     name: "Couple Layout 2x3",
     image: coupleLayout,
-    slug: "couple-layout-2x3",
+    slug: "couple-2x3",
   },
   {
     id: 2,
     name: "Single Layout 1x3",
     image: singleLayout,
-    slug: "single-layout-1x3",
+    slug: "single-1x3",
   },
   {
     id: 3,
     name: "Newspaper Layout",
     image: newsPapperLayout,
-    slug: "newspaper-layout.png",
+    slug: "newspaper",
   },
 ];
 

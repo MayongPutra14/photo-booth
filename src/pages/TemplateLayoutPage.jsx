@@ -30,11 +30,11 @@ const TemplateLayoutPage = () => {
   };
 
   return (
-    <section className="relative flex flex-1 flex-col items-cente bg-zinc-200 pt-4 md:pt-8">
+    <section className="items-center relative flex flex-1 flex-col bg-zinc-200 pt-4 md:pt-8">
       {/* HEADER SECTION */}
-      <div className="relative w-[80%] max-w-120 text-center">
-        <Pencil className="abosolute -top-2 -left-12 w-24 md:-left-20 md:w-30" />
-        <h1 className="text-5xl font-bold md:text-6xl">
+      <div className="relative w-[80%] text-center">
+        <Pencil className="abosolute -top-2 -left-10 w-24 md:-left-20 md:w-30" />
+        <h1 className="text-5xl font-medium md:text-6xl">
           Pilih Layout
         </h1>
         <div className="mt-8 flex h-28 items-center justify-around">
@@ -52,7 +52,7 @@ const TemplateLayoutPage = () => {
         />
       </div>
 
-      {/* BUTTON NEXT & BACK PAGE */}
+      {/* BUTTON BACK*/}
       <div className="flex items-center justify-between gap-32">
         <ButtonNext
           label={"Kembali"}
@@ -63,6 +63,7 @@ const TemplateLayoutPage = () => {
           iconContainerClassName="bg-white text-zinc-900"
         />
 
+      {/* BUTTON NEXT */}
         <ButtonNext
           label={"Lanjut"}
           onClick={handleNextPage}
