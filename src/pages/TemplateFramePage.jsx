@@ -38,6 +38,14 @@ const TemplateFrame = () => {
     setChosenFrame(null);
   };
 
+  const handlePaymentSuccess = () => {
+    setShowPayment(false);
+
+    navigate("/camera", {
+      state: { frame: chosenFrame },
+    });
+  };
+
   const filteredFrames = selectedLayout
     ? Object.entries(allframes)
         .filter(([path]) =>
@@ -81,7 +89,7 @@ const TemplateFrame = () => {
             onClick={() =>
               handleSelectedFrame(src)
             }
-            className={`group cursor-pointer transition-al`}
+            className={`group transition-al cursor-pointer`}
           >
             <img
               src={src}
@@ -96,6 +104,7 @@ const TemplateFrame = () => {
         <PaymentPopup
           onClose={handleClosePopup}
           selectedFrame={chosenFrame}
+          onPaymentSuccess={handlePaymentSuccess}
         />
       )}
 

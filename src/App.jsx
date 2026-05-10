@@ -7,6 +7,7 @@ import {
 import HomePage from "./pages/HomePage";
 import TemplateLayoutPage from "./pages/TemplateLayoutPage";
 import TemplateFrame from "./pages/TemplateFramePage";
+import CameraPage from "./pages/CameraPage";
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
           <Route
             path="/frame"
             element={<TemplateFrame />}
+          />
+          <Route
+            path="/camera"
+            element={<CameraPage />}
           />
         </Route>
       </Routes>

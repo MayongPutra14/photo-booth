@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-teachers: "Teachers", ui-sans-serif, system-ui, sans-serif;
+  --font-teachers:
+    "Teachers", ui-sans-serif, system-ui,
+    sans-serif;
 }
 
 @layer base {
@@ -20,7 +22,8 @@
   font-family: "Teachers";
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fonts/teachers-v6-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/teachers-v6-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* teachers-500 - latin */
 @font-face {
@@ -28,7 +31,8 @@
   font-family: "Teachers";
   font-style: normal;
   font-weight: 500;
-  src: url("./assets/fonts/teachers-v6-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/teachers-v6-latin-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* teachers-700 - latin */
 @font-face {
@@ -36,7 +40,8 @@
   font-family: "Teachers";
   font-style: normal;
   font-weight: 700;
-  src: url("./assets/fonts/teachers-v6-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/teachers-v6-latin-700.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* teachers-800 - latin */
 @font-face {
@@ -44,5 +49,20 @@
   font-family: "Teachers";
   font-style: normal;
   font-weight: 800;
-  src: url("./assets/fonts/teachers-v6-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/teachers-v6-latin-800.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-flash {
+  animation: flash 0.6s ease-out forwards;
 }

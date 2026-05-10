@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 
 const PaymentPopup = ({
   onClose,
+  onPaymentSuccess,
+  _selectedFrame,
 }) => {
   const [animate, setAnimate] = useState(false);
 
@@ -16,9 +18,25 @@ const PaymentPopup = ({
     return () => clearTimeout(timeout);
   }, []);
 
+  //   SIMULATION PAYMENT
+  useEffect(() => {
+    const paymentTimer = setTimeout(() => {
+      console.log(
+        "Pembayaran Berhasil (Simulasi)",
+      );
+
+      setAnimate(false);
+
+      setTimeout(() => {
+        onPaymentSuccess();
+      }, 500);
+    }, 7000);
+
+    return () => clearTimeout(paymentTimer);
+  }, [onPaymentSuccess]);
+
   const handleClose = () => {
     setAnimate(false);
-
     setTimeout(() => {
       onClose();
     }, 500);

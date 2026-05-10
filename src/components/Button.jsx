@@ -1,3 +1,5 @@
+import { FaCamera } from "react-icons/fa";
+
 export const ButtonNext = ({
   label,
   onClick,
@@ -39,6 +41,24 @@ export const ButtonSlide = ({
       <div className="rounded-full bg-white shadow-md">
         {Icon && <Icon className="text-5xl" />}
       </div>
+    </button>
+  );
+};
+
+export const ButtonCamera = ({
+  onClick,
+  disabled,
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className="mt-2 flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-red-500 shadow-xl transition active:scale-95 disabled:opacity-40"
+    >
+      <FaCamera
+        size={38}
+        className="text-white"
+      />
     </button>
   );
 };
